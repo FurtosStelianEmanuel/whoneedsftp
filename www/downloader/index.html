@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <script src="loader.js"></script>
+    <style>
+        .regular-text {
+            font-size: 20px;
+        }
+
+        .element-container {
+            width: 150px;
+        }
+
+        .download-button {
+            background-color: DodgerBlue;
+            cursor: pointer;
+            width: 100%;
+            height: 50px;
+        }
+
+        .stepinto-button{
+            background-color: darkgoldenrod;
+            cursor: pointer;
+            width: 100%;
+            height: 50px;
+        }
+
+        @media screen and (max-width: 500px) {
+            .element-container {
+                width: 85%;
+            }
+
+            .download-button, .stepinto-button {
+                height: 100px;
+                border-width: 8px;
+            }
+            
+
+            h3 {
+                font-size: 40px;
+            }
+
+            .regular-text {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>File downloader</h2>
+    <div id="fileHolderId">
+
+    </div>
+</body>
+
+</html>
