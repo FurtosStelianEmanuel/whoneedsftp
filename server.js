@@ -50,7 +50,7 @@ app.get('/api/icons', (req, res) => {
 app.get('/api/download', (req, res) => {
     //will change from name to path when supporting navigation in directories
     var name = req.query.name;
-    
+
     DownloadFile(name, res);
 })
 
@@ -71,7 +71,7 @@ function GetSizeOfFileFromStats(stats) {
 }
 
 function GetStatsOfFileInDownloadFolder(file) {
-    var stats = fs.statSync(path.join(__dirname, DownloadFolder));
+    var stats = fs.statSync(path.join(__dirname, DownloadFolder, file.name));
 
     return stats;
 }
