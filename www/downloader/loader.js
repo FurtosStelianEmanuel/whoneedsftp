@@ -25,9 +25,7 @@ function CreateElement(fileProperties) {
 
     var title = document.createElement('h3');
     title.innerHTML = fileProperties.Name;
-
-
-
+    title.style.wordBreak = "break-all";
 
     elementContainer.appendChild(icon);
     elementContainer.appendChild(title);
