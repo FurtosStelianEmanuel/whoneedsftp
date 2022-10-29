@@ -19,13 +19,13 @@ function CreateElement(fileProperties) {
     elementContainer.className = 'element-container';
 
     var icon = document.createElement('img');
-    icon.src = `/api/icons?name=${fileProperties.Icon}`
+    icon.src = `/api/icons/${fileProperties.Icon}`
     icon.style.maxWidth = '100%';
     icon.style.maxHeight = '100%';
 
     var title = document.createElement('h3');
     title.innerHTML = fileProperties.Name;
-    title.style.wordBreak = "break-all";
+    title.style.wordBreak = 'break-all';
 
     elementContainer.appendChild(icon);
     elementContainer.appendChild(title);
