@@ -7,6 +7,7 @@ const Enumerable = require('node-enumerable');
 const DownloadFolder = 'download';
 const FolderIcon = 'Folder.png';
 const IconsFolder = 'icons';
+const GitIgnoreFile = '.gitignore';
 
 const IconNames = GetIconNames();
 
@@ -20,6 +21,7 @@ app.get('/loader.js', (req, res) => {
 
 app.get('/api/data', (req, res) => {
     var files = fs.readdirSync(DownloadFolder, { withFileTypes: true });
+    files = Enumerable.from(files).where(f => f.name !== GitIgnoreFile).toArray();
 
     var data = {
         Files: files.map(function (f) {
