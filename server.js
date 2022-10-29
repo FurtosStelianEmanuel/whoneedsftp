@@ -45,7 +45,6 @@ app.get('/api/data', (req, res) => {
 
 app.get('/api/icons/*', (req, res) => {
     var splittedUrl = req.url.split('/');
-    console.log(splittedUrl);
     var iconName = splittedUrl[splittedUrl.length - 1];
 
     SendFile(`icons/${iconName}`, res);
